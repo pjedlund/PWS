@@ -8,7 +8,6 @@ dist
 .vscode
 .atom
 .frontmatter
-.netlify
 
 # Mac
 DS_store
