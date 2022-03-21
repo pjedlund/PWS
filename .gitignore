@@ -1,4 +1,21 @@
+# Base
 node_modules
 dist
 .env
+
+# Editor configs mm
 .nova
+.vscode
+.atom
+.frontmatter
+.netlify
+
+# Mac
+DS_store
+
+# Static folders
+__originals
+__resources
+__private
+__drafts
+__backup
