@@ -1,4 +1,22 @@
+### Header
+# Comment
+src/posts/intro
+src/posts/sanktpetersburg
+
 node_modules
 dist
 .env
 .nova
+.frontmatter
+.nova
+.vscode
+DS_store
+__originals
+__resources
+__projects
+__private
+__drafts
+__backup
+
+# Local Netlify folder
+.netlify
