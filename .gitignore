@@ -7,7 +7,6 @@ node_modules
 dist
 .env
 .nova
-.frontmatter
 .nova
 .vscode
 DS_store
@@ -20,3 +19,7 @@ __backup
 
 # Local Netlify folder
 .netlify
+
+# Front matter CMS
+.frontmatter
+frontmatter.json
