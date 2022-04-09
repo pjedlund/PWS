@@ -76,15 +76,17 @@ html {
 
 body {
     // Make the `body` use the `font-size-root`
-    font-family: $font-family-base;
-    font-size: $font-size-base;
+    font-family: $fontFamilyBase;
+    font-size: $fontSizeBase;
     line-height: $line-height;
 
-    color: $text-color;
+    color: $font-color;
     background-color: $bg-color;
 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    
+    overflow-x: hidden; //moved from _layout
 }
 
 //

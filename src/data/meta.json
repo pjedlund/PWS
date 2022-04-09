@@ -1,7 +1,9 @@
 {
-    "title": "Eleventastic",
-    "description": "An Eleventy Starter Kit",
-    "url": "https://eleventastic.netlify.app",
+    "title": "Johan Edlund",
+    "description": "Certified and bona fide photovoltaic installer.",
+    "domain": "www.johanedlund.se",
+    "url": "https://www.johanedlund.se",
     "lang": "en",
-    "locale": "en_us"
+    "locale": "en_us",
+    "repo": "https://github.com/pjedlund/JED11ty"
 }
