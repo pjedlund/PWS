@@ -2,6 +2,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const pluginSvgSprite = require("eleventy-plugin-svg-sprite");
 const markdownIt = require('markdown-it')
+const markdownItAttrs = require('markdown-it-attrs')
 
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
@@ -35,25 +36,35 @@ module.exports = function (config) {
     config.addWatchTarget('./src/assets')
 
     // Markdown
-    config.setLibrary(
-        'md',
-        markdownIt({
-            html: true,
-            breaks: true,
-            linkify: true,
-            typographer: true
-        })
-    )
+    let markdownItOptions = {
+        html: true, 
+        breaks: true, 
+        linkify: true, 
+        typographer: true
+    };
+    let markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+    config.setLibrary('md', markdownLib)
 
     // Layouts
     config.addLayoutAlias('base', 'base.njk')
-    config.addLayoutAlias('post', 'post.njk')
+    config.addLayoutAlias('article', 'article.njk')
 
     // Pass-through files
     config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
+    
+    // Pass-through files
+    config.addPassthroughCopy('src/articles/*/*.jpeg')
+    config.addPassthroughCopy('src/articles/*/*.jpg')
+    //config.addPassthroughCopy("src/**/*.jpg");
+    // config.addPassthroughCopy('src/assets/fonts')
+    //????
+    // config.addPassthroughCopy('src/media')
+    
+    //SuperDuperStatic directories
+    //config.addPassthroughCopy('cv')
 
     // Deep-Merge
     config.setDataDeepMerge(true)
