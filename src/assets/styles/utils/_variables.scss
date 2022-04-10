@@ -1,11 +1,30 @@
-//--------------------
-// SCSS VARIABLES
-//--------------------
+/*---------- COLORS ----------*/
 
-// Grid breakpoints
-//
-// Define the minimum and maximum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
+// Foreground
+$headerColor: #008B94;
+$headerH1Color: $headerColor;
+
+// Background
+$bgColor: #1D252C;
+$paneBgColor: #202A33;
+
+// Grayscale.
+$grayDarkest: #373a3c;
+$grayDark: #55595c;
+$gray: #818a91;
+$grayLight: #eceeef;
+$grayLightest: #f7f7f9;
+
+// Brand Colors
+$brandRed: #fc6767;
+$brandColorPrimary: $brandRed;
+$brandColorPrimaryOffset: darken($brandRed, 6%);
+
+
+/*---------- LAYOUT ----------*/
+
+$spacing-x: 2rem;
+$spacing-y: 2rem;
 
 $breakpoints: (
     md: 670px,
@@ -13,72 +32,39 @@ $breakpoints: (
     xl: 1260px
 );
 
-$container-max-width: 1200px;
+$containerMaxWidth: 1200px;
 
 // Z-Index Stack
-//
-// Control the order of layers in the application
-$z-layers: (
+$zLayers: (
     'modal': 999,
     'nav': 100,
     'content-overlay': 30
 );
 
-// Colors
-//
-// Grayscale.
+// Shapes and shadows
+$box-shadow-elevated: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+$border-radius: 0.25rem;
 
-$gray-darkest: #373a3c;
-$gray-dark: #55595c;
-$gray: #818a91;
-$gray-light: #eceeef;
-$gray-lightest: #f7f7f9;
 
-// Brand Colors
+/*---------- TYPOGRAPHY ----------*/
+$fontFamilySansSerif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$fontFamilySerif: Ingeborg, Georgia, 'Times New Roman', Times, serif;
+$fontFamilyMonospace: "Dank Mono", "Fira Code", "Victor Mono Regular", Inconsolata, "Fira Mono","Source Code Pro","Anonymous Pro", "Droid Sans Mono","Ubuntu Mono", "Bitstream Vera Sans Mono", Menlo, Monaco, Consolas, 'Andale Mono', 'Courie New', monospace;
 
-$brand-red: #fc6767;
-
-// Color Mappings
-
-$bg-color: #1D252C;
-$main-bg-color: #202A33;
-
-$brand-color-primary: $brand-red;
-$brand-color-primary-offset: darken($brand-red, 6%);
-
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family-serif: Georgia, 'Times New Roman', Times, serif;
-$font-family-monospace: "Dank Mono", "Fira Code", "Victor Mono Regular", Inconsolata, "Fira Mono","Source Code Pro","Anonymous Pro", "Droid Sans Mono","Ubuntu Mono", "Bitstream Vera Sans Mono", Menlo, Monaco, Consolas, 'Andale Mono', 'Courie New', monospace;
-
-$fontFamilyBase: $font-family-serif;
-$font-color: $gray-lightest;
-$font-size-root: 112.5%; /*18px*/
+$fontFamilyBase: $fontFamilySerif;
+$fontColor: $grayLightest;
+$fontSizeRoot: 112.5%; /*18px*/
 $fontSizeBase: 1rem;
-$line-height: 1.618;
+$lineHeight: 1.618;
 
-$headerColor: #008B94;
 
-// Animation    
-//
-// Default easing curves, Transitions, etc
+/*---------- LINKS ----------*/
+$linkColor: #123456;
 
+/*---------- ANIMATION ----------*/    
+
+// Easing
 $animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
 $animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
 $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
 $animation-curve-default: $animation-curve-fast-out-slow-in;
-
-// Misc Shared
-//
-// common shared styles
-
-$spacing-x: 2rem;
-$spacing-y: 2rem;
-
-$box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
-$box-shadow-elevated: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
-
-$border-radius: 0.25rem;
