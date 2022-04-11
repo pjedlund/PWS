@@ -28,8 +28,15 @@
 }
 
 .container {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    //width: 90%; // 231/2560*100 = 9,0234375
+    margin-left: 9.0234375vw;
+    margin-right: 9.0234375vw;
     max-width: $containerMaxWidth;
+}
+
+.card {
+    background: $paneBgColor;
+    box-shadow:  $boxShadowElevated;
+    padding: $spacingY 12vw; // 285/16 = 17.8125rem
+    
 }

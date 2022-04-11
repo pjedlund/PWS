@@ -1,12 +1,54 @@
 /*---------- COLORS ----------*/
 
+//City Lights
+
+$very-light-gray: #B7C5D3;
+$light-gray: #718CA1;
+$gray: #41505E;
+$dark-gray: #333F4A;
+$very-dark-gray: #1D252C;
+
+$color1light: #70E1E8;
+$color1medium: #33CED8;
+$color1dark: #008B94;
+
+$color2light: #5EC4FF;
+$color2medium: #68A1F0;
+$color2dark: #539AFC;
+
+$color3light:  #E27E8D;
+$color3medium:#D95468;
+$color3dark:#B62D65;
+
+$color4light: #EBBF83;
+$color4dark: #D98E48;
+
+$color5light: #8BD49C;
+$color6dark: #718CA1;
+$color7light: #8BD49C;
+
+
+$cyan: $color1light;
+$blue: $color2light;
+$purple: $color3dark;
+$pink: $color3light;
+$yellow: $color4light;
+$green: $color5light;
+$red: $color3medium;
+$orange: $color4dark;
+$light-orange: $color4light;
+
+
+
+
 // Foreground
 $headerColor: #008B94;
 $headerH1Color: $headerColor;
 
 // Background
-$bgColor: #1D252C;
-$paneBgColor: #202A33;
+
+$bgColor: $very-dark-gray;
+$paneBgColor:#202A33; 
 
 // Grayscale.
 $grayDarkest: #373a3c;
@@ -23,8 +65,8 @@ $brandColorPrimaryOffset: darken($brandRed, 6%);
 
 /*---------- LAYOUT ----------*/
 
-$spacing-x: 2rem;
-$spacing-y: 2rem;
+$spacingX: 2rem;
+$spacingY: 2rem;
 
 $breakpoints: (
     md: 670px,
@@ -32,7 +74,8 @@ $breakpoints: (
     xl: 1260px
 );
 
-$containerMaxWidth: 1200px;
+$containerMaxWidth: 1351px;
+$paneBackgroundColor: #123456;
 
 // Z-Index Stack
 $zLayers: (
@@ -42,24 +85,32 @@ $zLayers: (
 );
 
 // Shapes and shadows
-$box-shadow-elevated: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
-$border-radius: 0.25rem;
+$boxShadowElevated: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+$borderRadius: 0.25rem;
 
 
 /*---------- TYPOGRAPHY ----------*/
+
 $fontFamilySansSerif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$fontFamilySerif: Ingeborg, Georgia, 'Times New Roman', Times, serif;
+// https://similarfont.io/1-google-font-similar-to-georgia Tinos
+$fontFamilySerif: Ingeborg, Tinos, Georgia, 'Times New Roman', Times, serif;
 $fontFamilyMonospace: "Dank Mono", "Fira Code", "Victor Mono Regular", Inconsolata, "Fira Mono","Source Code Pro","Anonymous Pro", "Droid Sans Mono","Ubuntu Mono", "Bitstream Vera Sans Mono", Menlo, Monaco, Consolas, 'Andale Mono', 'Courie New', monospace;
 
-$fontFamilyBase: $fontFamilySerif;
-$fontColor: $grayLightest;
-$fontSizeRoot: 112.5%; /*18px*/
+$fontFamilyBase: $fontFamilySansSerif;
+$fontFamilyHeader: $fontFamilySerif;
+$fontColor: $very-light-gray;
+$fontSizeRoot: 100%; /*16px*/
 $fontSizeBase: 1rem;
 $lineHeight: 1.618;
 
 
 /*---------- LINKS ----------*/
-$linkColor: #123456;
+
+$linkColor: $color3medium;
+$linkVisitedColor: lighten($linkColor, 20%);
+$linkHoverColor: darken($linkColor, 20%);
+$linkActiveColor: darken($linkColor, 10%);
+
 
 /*---------- ANIMATION ----------*/    
 

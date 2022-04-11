@@ -86,6 +86,9 @@ body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     
+    //font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+    //font-size: @include betterClamp(16px,32px,480px,1200px);
+    
     overflow-x: hidden; //moved from _layout
 }
 
