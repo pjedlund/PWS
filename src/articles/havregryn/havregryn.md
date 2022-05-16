@@ -2,15 +2,15 @@
 title: Havregrynsgröt brukar jag äta på morgonen
 lang: sv
 locale: sv_se
-description: 'Recept på havregrynsgröt på svenska från'
+description: Recept på havregrynsgröt på svenska.
 tags:
-- food
-- vegan
-- svenska
+  - food
+  - vegan
+  - svenska
 date: 2022-02-14T14:00:31+01:00
-lastmod: 2022-02-23T12:48:31+01:00
+lastmod: 2022-05-08T09:09:28.057Z
 draft: false
-preview: "/src/articles/havregryn/havregrynsgrot.jpeg"
+preview: /src/articles/havregryn/havregrynsgrot.jpeg
 ---
 
 {{TOC}}
@@ -23,7 +23,7 @@ Tempor amet [voluptate](https://www.johanedlund.se) ei usmod do quis Lorem paria
 
 ### Bild 123 -h3
 
-![Havregrynsgröt med skivade jordgubbar](havregrynsgrot.jpeg)
+![Havregrynsgröt med skivade jordgubbar](havregrynsgrot.jpeg){.extend}
 
 Elit ex elit cupidatat eiusmod est magna officia ullamco. Occaecat culpa aute sunt cillum proident nisi nostrud reprehenderit reprehenderit et sit ex elit. Qui laboris Lorem esse ipsum aliqua dolor laborum amet ad incididunt. Sit voluptate irure mollit sint nostrud occaecat enim velit. Laborum nostrud proident officia mollit duis aute sunt ullamco ad Lorem eu ipsum.
 

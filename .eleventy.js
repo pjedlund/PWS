@@ -54,10 +54,27 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
+
+    const IS_PRODUCTION = process.env.ELEVENTY_ENV === 'production'
+    const CONTENT_GLOBS = {
+        articles: 'src/posts/**/*.md',
+        drafts: 'src/drafts/**/*.md',
+        notes: 'src/notes/*.md',
+        media: '**/*.jpg|**/*.jpeg|**/*.png|**/*.gif|**/*.mp4|**/*.webp|**/*.webm'
+    }
     
     // Pass-through files
     config.addPassthroughCopy('src/articles/*/*.jpeg')
-    config.addPassthroughCopy('src/articles/*/*.jpg')
+    // config.addPassthroughCopy('src/articles/*/*.jpg')
+    //herregud - 3 timmar utan att lyckas hitta ett bättre sätt än detta:
+    // config.addPassthroughCopy("**/*.jpeg")
+    // config.addPassthroughCopy("**/*.jpg")
+    //config.addPassthroughCopy("**/*.png")
+    // config.addPassthroughCopy("**/*.gif")
+    // config.addPassthroughCopy("**/*.mp4")
+    // config.addPassthroughCopy("**/*.webp")
+    // config.addPassthroughCopy("**/*.webm")
+    // config.addPassthroughCopy("**/*.avif")
     //config.addPassthroughCopy("src/**/*.jpg");
     // config.addPassthroughCopy('src/assets/fonts')
     //????
