@@ -12,7 +12,7 @@ dist
 # Mac
 DS_store
 
-# Static folders
+# Resource folders
 __originals
 __resources
 __private
