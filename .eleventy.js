@@ -1,12 +1,23 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
-const pluginSvgSprite = require("eleventy-plugin-svg-sprite");
+const pluginSvgSprite = require("eleventy-plugin-svg-sprite")
+const pluginPageAssets = require('eleventy-plugin-page-assets')
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
+
 
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
+
+const IS_PRODUCTION = process.env.ELEVENTY_ENV === 'production'
+
+const CONTENT_GLOBS = {
+    articles: 'src/articles/**/*.md',
+    drafts: 'src/drafts/**/*.md',
+    notes: 'src/notes/*.md',
+    media: '*.jpg|*.jpeg|*.png|*.gif|*.mp4|*.webp|*.webm'
+}
 
 module.exports = function (config) {
     // Plugins
@@ -15,6 +26,13 @@ module.exports = function (config) {
     config.addPlugin(pluginSvgSprite, {
         path: "./src/assets/icons",
         svgSpriteShortcode: "iconsprite"
+    })
+    config.addPlugin(pluginPageAssets, {
+        mode: 'parse',
+        hashAssets: 'true',
+        postsMatching: 'src/articles/*/*.md',
+        assetsMatching: CONTENT_GLOBS.media,
+        silent: true
     })
 
     // Filters
@@ -55,16 +73,11 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
 
-    const IS_PRODUCTION = process.env.ELEVENTY_ENV === 'production'
-    const CONTENT_GLOBS = {
-        articles: 'src/posts/**/*.md',
-        drafts: 'src/drafts/**/*.md',
-        notes: 'src/notes/*.md',
-        media: '**/*.jpg|**/*.jpeg|**/*.png|**/*.gif|**/*.mp4|**/*.webp|**/*.webm'
-    }
+
+
     
     // Pass-through files
-    config.addPassthroughCopy('src/articles/*/*.jpeg')
+    // config.addPassthroughCopy('src/articles/*/*.jpeg')
     // config.addPassthroughCopy('src/articles/*/*.jpg')
     //herregud - 3 timmar utan att lyckas hitta ett bättre sätt än detta:
     // config.addPassthroughCopy("**/*.jpeg")

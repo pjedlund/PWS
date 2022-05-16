@@ -47,6 +47,7 @@
     "webpack": "^5.28.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "eleventy-plugin-page-assets": "^0.3.0"
   }
 }
