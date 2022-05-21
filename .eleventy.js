@@ -4,7 +4,7 @@ const pluginSvgSprite = require("eleventy-plugin-svg-sprite")
 const pluginPageAssets = require('eleventy-plugin-page-assets')
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
-
+const markdownItFootnote = require("markdown-it-footnote")
 
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
@@ -14,7 +14,6 @@ const IS_PRODUCTION = process.env.ELEVENTY_ENV === 'production'
 
 const CONTENT_GLOBS = {
     articles: 'src/articles/**/*.md',
-    drafts: 'src/drafts/**/*.md',
     notes: 'src/notes/*.md',
     media: '*.jpg|*.jpeg|*.png|*.gif|*.mp4|*.webp|*.webm'
 }
@@ -60,8 +59,11 @@ module.exports = function (config) {
         linkify: true, 
         typographer: true
     };
-    let markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+    let markdownLib = markdownIt(markdownItOptions)
+                        .use(markdownItAttrs)
+                        .use(markdownItFootnote)
     config.setLibrary('md', markdownLib)
+
 
     // Layouts
     config.addLayoutAlias('base', 'base.njk')
@@ -72,8 +74,6 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
-
-
 
     
     // Pass-through files

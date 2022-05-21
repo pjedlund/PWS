@@ -2,15 +2,13 @@
 title: Havregrynsgröt brukar jag äta på morgonen
 lang: sv
 locale: sv_se
-description: Recept på havregrynsgröt på svenska.
+description: meta description in article Recept på havregrynsgröt på svenska.
 tags:
   - food
   - vegan
   - svenska
 date: 2022-02-14T14:00:31+01:00
-lastmod: 2022-05-08T09:09:28.057Z
-draft: false
-preview: /src/articles/havregryn/havregrynsgrot.jpeg
+lastmod: 2022-05-21T11:35:11.241Z
 ---
 
 {{TOC}}
@@ -19,13 +17,16 @@ preview: /src/articles/havregryn/havregrynsgrot.jpeg
 
 ## Underrubrik
 
-Tempor amet [voluptate](https://www.johanedlund.se) ei usmod do quis Lorem pariatur incididunt nulla occaecat ut. Sunt ea nisi fugiat amet commodo amet aute irure cupidatat. In reprehenderit occaecat irure sit irure minim minim consequat. Ullamco in ea do aliqua incididunt ea. Fugiat aliqua pariatur consequat tempor aliqua anim eu dolore minim quis sint sit. Minim ipsum dolor reprehenderit minim amet elit do commodo minim. Magna dolor magna duis anim enim reprehenderit nostrud nostrud.
+Tempor amet [voluptate](https://www.johanedlund.se) ei usmod do quis Lorem pariatur incididunt nulla occaecat ut. Sunt ea nisi fugiat footnote^[A footnote inlined] amet commodo amet aute irure cupidatat. In reprehenderit occaecat irure sit irure minim minim consequat. Ullamco in ea do aliqua incididunt ea. Fugiat aliqua pariatur consequat tempor aliqua anim eu dolore minim quis sint sit. Minim ipsum dolor reprehenderit minim amet elit do commodo minim. Magna dolor magna duis anim enim reprehenderit nostrud nostrud.
 
 ### Bild 123 -h3
 
-![Havregrynsgröt med skivade jordgubbar](havregrynsgrot.jpeg){.extend}
+<figure class="extend">
+<img src="havre3.jpg" width="2000" alt="This is an alt">
+<figcaption>This is a caption</figcaption>
+</figure>
 
-Elit ex elit cupidatat eiusmod est magna officia ullamco. Occaecat culpa aute sunt cillum proident nisi nostrud reprehenderit reprehenderit et sit ex elit. Qui laboris Lorem esse ipsum aliqua dolor laborum amet ad incididunt. Sit voluptate irure mollit sint nostrud occaecat enim velit. Laborum nostrud proident officia mollit duis aute sunt ullamco ad Lorem eu ipsum.
+Elit ex elit cupidatat eiusmod^[A footnote for the figcaption?] est magna officia ullamco. Occaecat culpa aute sunt cillum proident nisi nostrud reprehenderit reprehenderit et sit ex elit. Qui laboris Lorem esse ipsum aliqua dolor laborum amet ad incididunt. Sit voluptate irure mollit sint nostrud occaecat enim velit. Laborum nostrud proident officia mollit duis aute sunt ullamco ad Lorem eu ipsum.
 
 ### Bild 123 -h3
 
@@ -56,7 +57,7 @@ Quis irure nostrud aliqua magna. Laborum ex cillum sit amet ad dolor do excepteu
 
 #### Ännu en underrubrik - h4
 
-Dolor cillum non consequat elit Lorem consectetur. Amet amet nulla dolore tempor. Minim duis eiusmod consectetur elit nisi ad esse dolor aute enim veniam sunt. Laborum laborum consectetur ad qui dolore et pariatur sunt sunt exercitation laboris laborum. Exercitation adipisicing ullamco quis pariatur laboris consectetur sunt enim eu quis ad ea officia.
+Dolor cillum non consequat elit Lorem consectetur^[Definition from https://dictionary.cambridge.org/dictionary/english/footnote]. Amet amet nulla dolore tempor. Minim duis eiusmod consectetur elit nisi ad esse dolor aute enim veniam sunt. Laborum laborum consectetur ad qui dolore et pariatur sunt sunt exercitation laboris laborum. Exercitation adipisicing ullamco quis pariatur laboris consectetur sunt enim eu quis ad ea officia.
 
 ##### Underrubrik - h5
 
