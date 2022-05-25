@@ -1,11 +1,72 @@
+/*---------- COLORS ----------*/
+
+//City Lights
+
+ $very-light-gray: #B7C5D3;
+ $light-gray: #718CA1;
+ $gray: #41505E;
+ $dark-gray: #333F4A;
+ $very-dark-gray: #1D252C;
+
+// $color1light: #70E1E8;
+// $color1medium: #33CED8;
+// $color1dark: #008B94;
+
+// $color2light: #5EC4FF;
+// $color2medium: #68A1F0;
+// $color2dark: #539AFC;
+
+// $color3light:  #E27E8D;
+    $color3medium:#D95468;
+// $color3dark:#B62D65;
+
+// $color4light: #EBBF83;
+// $color4dark: #D98E48;
+
+// $color5light: #8BD49C;
+// $color6dark: #718CA1;
+// $color7light: #8BD49C;
+
+
+// $cyan: $color1light;
+// $blue: $color2light;
+// $purple: $color3dark;
+// $pink: $color3light;
+// $yellow: $color4light;
+// $green: $color5light;
+// $red: $color3medium;
+// $orange: $color4dark;
+// $light-orange: $color4light;
+
+
 //--------------------
 // SCSS VARIABLES
 //--------------------
 
-// Grid breakpoints
-//
-// Define the minimum and maximum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
+// Foreground
+$header-color: #008B94;
+$header-h1-color: $header-color;
+
+// Background
+$bg-color:#202A33; 
+
+// Grayscale.
+$grayDarkest: #373a3c;
+$grayDark: #55595c;
+$gray: #818a91;
+$grayLight: #eceeef;
+$grayLightest: #f7f7f9;
+
+// Brand Colors
+$brand-red: #fc6767;
+$brand-color-primary: $brand-red;
+$brand-color-primary-offset: darken($brand-red, 6%);
+
+
+/*---------- LAYOUT ----------*/
+
+$spacingX: 2rem;
+$spacingY: 2rem;
 
 $breakpoints: (
     md: 670px,
@@ -14,70 +75,45 @@ $breakpoints: (
 );
 
 $container-max-width: 1200px;
+$container-narrow-max-width: 800px;
+$pane-bg-color: #123456;
 
 // Z-Index Stack
-//
-// Control the order of layers in the application
-$z-layers: (
+$zLayers: (
     'modal': 999,
     'nav': 100,
     'content-overlay': 30
 );
 
-// Colors
-//
-// Grayscale.
+// Shapes and shadows
+$boxShadowElevated: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+$borderRadius: 0.25rem;
 
-$gray-darkest: #373a3c;
-$gray-dark: #55595c;
-$gray: #818a91;
-$gray-light: #eceeef;
-$gray-lightest: #f7f7f9;
 
-// Brand Colors
+/*---------- TYPOGRAPHY ----------*/
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+// https://similarfont.io/1-google-font-similar-to-georgia Tinos
+$font-family-serif: Ingeborg, Tinos, Georgia, 'Times New Roman', Times, serif;
+$fontFamilyMonospace: "Dank Mono", "Fira Code", "Victor Mono Regular", Inconsolata, "Fira Mono","Source Code Pro","Anonymous Pro","Ubuntu Mono", "Bitstream Vera Sans Mono", Menlo, Monaco, 'Andale Mono', 'Courier New', monospace;
 
-$brand-red: #fc6767;
-
-// Color Mappings
-
-$bg-color: #fff;
-$text-color: $gray-darkest;
-$brand-color-primary: $brand-red;
-$brand-color-primary-offset: darken($brand-red, 6%);
-
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family-serif: 'Times New Roman', Georgia, Times, serif;
-$font-family-monospace: Menlo, Monaco, Consolas, 'Andale Mono', 'Courier New',
-    monospace;
 $font-family-base: $font-family-sans-serif;
-
-$font-size-root: 100%;
+$font-family-header: $font-family-serif;
+$font-color: $very-light-gray;
+$font-size-root: 100%;/*16px*/
 $font-size-base: 1rem;
-$line-height: 1.625;
+$line-height: 1.618;
 
-// Animation
-//
-// Default easing curves, Transitions, etc
 
+/*---------- LINKS ----------*/
+$link-color: $color3medium;
+$link-color-visited: lighten($link-color, 20%);
+$link-color-hover: darken($link-color, 20%);
+$link-color-active: darken($link-color, 10%);
+
+
+/*---------- ANIMATION ----------*/
+// Easing
 $animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
 $animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
 $animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
 $animation-curve-default: $animation-curve-fast-out-slow-in;
-
-// Misc Shared
-//
-// common shared styles
-
-$spacing-x: 2rem;
-$spacing-y: 2rem;
-
-$box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
-$box-shadow-elevated: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
-
-$border-radius: 0.25rem;

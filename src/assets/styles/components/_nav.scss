@@ -9,6 +9,9 @@
     &__link {
         display: block;
         padding: 0.5em 1em;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
     }
     &__toggle {
         @include button-reset;

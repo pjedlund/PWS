@@ -6,6 +6,8 @@ src/posts/sanktpetersburg
 node_modules
 dist
 .env
+
+# Editor configs mm
 .nova
 .nova
 .vscode

@@ -1,0 +1,18 @@
+
+{
+    "name": "Per Johan Edlund",
+    "url": "https://www.johanedlund.se",
+    "email": "hello@johanedlund.se",
+    "phone": "+46 70 6022495",
+    "avatar": "/assets/images/avatar/JohanEdlund500x500.jpg",
+    "social": {
+        "twitter": {
+            "name": "pjedlund",
+            "url": "https://twitter.com/pjedlund"
+        },
+        "github": {
+            "name": "pjedlund",
+            "url": "https://github.com/pjedlund"
+        }
+    }
+}

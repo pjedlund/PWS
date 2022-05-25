@@ -6,6 +6,16 @@ module.exports = {
             String(format)
         )
     },
+    
+    readableDate: function (date, format) {
+        // stockholm timezone
+        const dt = DateTime.fromJSDate(date, { zone: 'UTC+1' })
+        if (!format) {
+            format =
+                dt.hour + dt.minute > 0 ? 'dd LLL yyyy - HH:mm' : 'dd LLL yyyy'
+        }
+        return dt.toFormat(format)
+    },
 
     dateToISO: function (date) {
         return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({

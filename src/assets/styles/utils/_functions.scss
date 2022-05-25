@@ -9,9 +9,9 @@
 
 // z-index layering
 @function z($layer) {
-    @if map-has-key($z-layers, $layer) == false {
-        @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+    @if map-has-key($zLayers, $layer) == false {
+        @warn "No layer found for `#{$layer}` in $zLayers map. Property omitted.";
     }
 
-    @return map-get($z-layers, $layer);
+    @return map-get($zLayers, $layer);
 }

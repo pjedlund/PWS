@@ -1,6 +1,12 @@
 <footer class="footer" role="contentinfo">
     <div class="footer__inner container">
-        <span>&copy; copyright {{ build.timestamp | dateToFormat('yyyy') }}</span>
+        <span>no copyright {{ build.timestamp | dateToFormat('yyyy') }}</span>
+        <p class="footer__item footer__item--right u-desktop-only">
+            <a href="https://speedlify.mxb.dev/mxb.dev/" class="footer__speedlify">
+            speedlifycircles here
+                {# <speedlify-score speedlify-url="https://speedlify.mxb.dev" hash="7dda0135" score weight></speedlify-score> #}
+            </a>
+        </p>
         <a href="http://github.com/maxboeck/eleventastic">
             {% icon "github" %}Eleventastic
         </a>
