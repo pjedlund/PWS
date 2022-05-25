@@ -5,6 +5,8 @@ const pluginPageAssets = require('eleventy-plugin-page-assets')
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require("markdown-it-footnote")
+const markdownItAnchor = require("markdown-it-anchor")
+const markdownItToCDoneRight= require("markdown-it-toc-done-right")
 
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
@@ -62,6 +64,14 @@ module.exports = function (config) {
     let markdownLib = markdownIt(markdownItOptions)
                         .use(markdownItAttrs)
                         .use(markdownItFootnote)
+                        .use(markdownItAnchor, {
+                            permalink: markdownItAnchor.permalink.headerLink({ safariReaderFix: true })
+                        })
+                        .use(markdownItToCDoneRight)
+    //TODO:!! add [num] infront of footnotes
+    // markdownLib.renderer.rules.footnote_open = () => (
+    //     '<li id="fn' + 555 + '" class="footnote-item">'
+    // );
     config.setLibrary('md', markdownLib)
 
 

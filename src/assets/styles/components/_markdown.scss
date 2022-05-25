@@ -44,4 +44,16 @@
         }
     }
 
+    .table-of-contents {
+        ol { 
+            counter-reset: list-item; 
+        }
+        li { 
+            display: block; counter-increment: list-item; 
+        }
+        li:before { 
+            content: counters(list-item,'.') ' '; 
+        }
+    }
+
 }
