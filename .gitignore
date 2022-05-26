@@ -9,7 +9,6 @@ dist
 
 # Editor configs mm
 .nova
-.nova
 .vscode
 DS_store
 __originals
