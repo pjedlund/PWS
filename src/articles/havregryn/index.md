@@ -8,7 +8,7 @@ tags:
   - vegan
   - svenska
 date: 2022-02-14T14:00:31+01:00
-lastmod: 2022-05-25T20:15:12.070Z
+lastmod: 2022-05-29T20:47:43.052Z
 ---
 
 [[TOC]]

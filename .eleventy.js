@@ -1,7 +1,7 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const pluginSvgSprite = require("eleventy-plugin-svg-sprite")
-const pluginPageAssets = require('eleventy-plugin-page-assets')
+// const pluginPageAssets = require('eleventy-plugin-page-assets')
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require("markdown-it-footnote")
@@ -28,13 +28,13 @@ module.exports = function (config) {
         path: "./src/assets/icons",
         svgSpriteShortcode: "iconsprite"
     })
-    config.addPlugin(pluginPageAssets, {
-        mode: 'parse',
-        hashAssets: 'true',
-        postsMatching: 'src/articles/*/*.md',
-        assetsMatching: CONTENT_GLOBS.media,
-        silent: true
-    })
+    // config.addPlugin(pluginPageAssets, {
+    //     mode: 'parse',
+    //     hashAssets: 'true',
+    //     postsMatching: 'src/articles/*/*.md',
+    //     assetsMatching: CONTENT_GLOBS.media,
+    //     silent: true
+    // })
 
     // Filters
     Object.keys(filters).forEach((filterName) => {
@@ -86,22 +86,8 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/assets/fonts')
 
     
-    // Pass-through files
-    // config.addPassthroughCopy('src/articles/*/*.jpeg')
-    // config.addPassthroughCopy('src/articles/*/*.jpg')
-    //herregud - 3 timmar utan att lyckas hitta ett bättre sätt än detta:
-    // config.addPassthroughCopy("**/*.jpeg")
-    // config.addPassthroughCopy("**/*.jpg")
-    //config.addPassthroughCopy("**/*.png")
-    // config.addPassthroughCopy("**/*.gif")
-    // config.addPassthroughCopy("**/*.mp4")
-    // config.addPassthroughCopy("**/*.webp")
-    // config.addPassthroughCopy("**/*.webm")
-    // config.addPassthroughCopy("**/*.avif")
-    //config.addPassthroughCopy("src/**/*.jpg");
-    // config.addPassthroughCopy('src/assets/fonts')
-    //????
-    // config.addPassthroughCopy('src/media')
+    // Pass-through for article-images
+    config.addPassthroughCopy('src/articles/*/*.{jpg,jpeg,png,gif,mp4,webp,webm,avif}')
     
     //SuperDuperStatic directories
     //config.addPassthroughCopy('cv')
@@ -111,6 +97,7 @@ module.exports = function (config) {
 
     // Base Config
     return {
+        passthroughFileCopy: true,
         dir: {
             input: 'src',
             output: 'dist',
