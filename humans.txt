@@ -31,6 +31,9 @@
 	
 	/* INSPIRATION */
 	
-	"Using UI System Fonts In Web Design: A Quick Practical Guide"
+	Using UI System Fonts In Web Design: A Quick Practical Guide
 	https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+
+  Removed role=banner from main header
+	https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_Role
 	
