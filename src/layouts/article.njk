@@ -2,14 +2,7 @@
 layout: base
 ---
 
-<article 
-    id="{{ title | slug }}" 
-    class="article container h-entry" 
-    role="article" 
-    itemscope 
-    itemtype="http://schema.org/BlogPosting" 
-    aria-labelledby="{{ title | slug }}-title" 
->
+<article id="{{ title | slug }}" class="article container h-entry" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ title | slug }}-title">
     <header class="article__header">
 
         <h1 id="{{ title | slug }}-title" class="article__title p-name title" itemprop="headline">{{ title }}</h1>
@@ -18,10 +11,7 @@ layout: base
             <p>
                 <time class="article__date dt-published" itemprop="datePublished" datetime="{{ page.date | dateToISO }}">{{ page.date | readableDate('dd LLL yyyy') }}</time>
                 {% if tags %}
-                <span aria-label="in category">&sdot;</span> <span class="article__tags p-category">{{ tags | join(', ') }}</span>
-                {% endif %}
-                {% if draft %}
-                <span aria-hidden="true">&sdot;</span> <span class="article__status">(Draft)</span>
+                <span>&sdot;</span> <span class="article__tags p-category">{{ tags | join(', ') }}</span>
                 {% endif %}
             </p>
         </div>

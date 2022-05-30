@@ -12,7 +12,7 @@
 <meta property="og:locale" content="{{ locale or meta.locale }}">
 <meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
 {%- if image -%}
-    <meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}">
+<meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}">
 {%- endif -%}
 
 {# Favicon #}
@@ -24,4 +24,4 @@
 <meta name="theme-color" content="#1a1a1a">
 
 {# RSS Feed #}
-<link type="application/atom+xml" rel="alternate" href="{{ meta.url }}/feed.xml" title="{{ meta.title }}">
+<link type="application/atom+xml" rel="alternate" href="{{ meta.url }}/feed.xml" title="{{ meta.title }}"> 
