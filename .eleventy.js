@@ -74,7 +74,6 @@ module.exports = function (config) {
     // );
     config.setLibrary('md', markdownLib)
 
-
     // Layouts
     config.addLayoutAlias('base', 'base.njk')
     config.addLayoutAlias('article', 'article.njk')
@@ -85,7 +84,6 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
 
-    
     // Pass-through for article-images
     config.addPassthroughCopy('src/articles/*/*.{jpg,jpeg,png,gif,mp4,webp,webm,avif}')
     
