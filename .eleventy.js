@@ -28,13 +28,6 @@ module.exports = function (config) {
         path: "./src/assets/icons",
         svgSpriteShortcode: "iconsprite"
     })
-    // config.addPlugin(pluginPageAssets, {
-    //     mode: 'parse',
-    //     hashAssets: 'true',
-    //     postsMatching: 'src/articles/*/*.md',
-    //     assetsMatching: CONTENT_GLOBS.media,
-    //     silent: true
-    // })
 
     // Filters
     Object.keys(filters).forEach((filterName) => {
@@ -69,9 +62,12 @@ module.exports = function (config) {
                         })
                         .use(markdownItToCDoneRight)
     //TODO:!! add [num] infront of footnotes
-    // markdownLib.renderer.rules.footnote_open = () => (
-    //     '<li id="fn' + 555 + '" class="footnote-item">'
-    // );
+    markdownLib.renderer.rules.footnote_block_open = () => (
+        
+        '<section class="footnotes">\n' +
+        '<h4 class="mt-3">Footnotes</h4>\n' +
+        '<ol class="footnotes-list">\n'
+    );
     config.setLibrary('md', markdownLib)
 
     // Layouts

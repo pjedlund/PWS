@@ -1,14 +1,14 @@
 ---
 title: Havregrynsgröt brukar jag äta på morgonen
-lang: sv
-locale: sv_se
+lang: zxx
+locale: lorem_ipsum (prev. sv_se)
 description: meta description in article Recept på havregrynsgröt på svenska.
 tags:
   - food
   - vegan
   - svenska
 date: 2022-02-14T14:00:31+01:00
-lastmod: 2022-05-29T20:47:43.052Z
+lastmod: 2022-05-30T10:42:33.798Z
 ---
 
 [[TOC]]
