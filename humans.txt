@@ -2,7 +2,7 @@
 /* humanstxt.org */
 
 /* TEAM */
-  Chief copy-paster: Per Johan Edlund
+  Chef CopyPaste: Per Johan Edlund
 	Contact: hello [at] johanedlund.se
   Site: https://www.johanedlund.se
   Twitter: @pjedlund
