@@ -29,3 +29,6 @@
 
   Removed role=banner from main header
 	https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_Role
+
+	The A11Y Project
+	https://www.a11yproject.com/
