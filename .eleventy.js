@@ -49,9 +49,9 @@ module.exports = function (config) {
 
     // Markdown
     let markdownItOptions = {
-        html: true, 
-        breaks: true, 
-        linkify: true, 
+        html: true,
+        breaks: true,
+        linkify: true,
         typographer: true
     };
     let markdownLib = markdownIt(markdownItOptions)
@@ -63,7 +63,7 @@ module.exports = function (config) {
                         .use(markdownItToCDoneRight)
     //TODO:!! add [num] infront of footnotes
     markdownLib.renderer.rules.footnote_block_open = () => (
-        
+
         '<section class="footnotes">\n' +
         '<h4 class="mt-3">Footnotes</h4>\n' +
         '<ol class="footnotes-list">\n'
@@ -76,13 +76,14 @@ module.exports = function (config) {
 
     // Pass-through files
     config.addPassthroughCopy('src/robots.txt')
+		config.addPassthroughCopy("src/humans.txt");
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
 
     // Pass-through for article-images
     config.addPassthroughCopy('src/articles/*/*.{jpg,jpeg,png,gif,mp4,webp,webm,avif}')
-    
+
     //SuperDuperStatic directories
     //config.addPassthroughCopy('cv')
 

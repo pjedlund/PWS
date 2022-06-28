@@ -2,12 +2,10 @@
 /* humanstxt.org */
 
 /* TEAM */
-  Chef CopyPaste: Per Johan Edlund
-	Contact: hello [at] johanedlund.se
-  Site: https://www.johanedlund.se
+  Per Johan Edlund
+	Contact: me [at] johanedlund.se
+  Website: https://www.johanedlund.se
   Twitter: @pjedlund
-  Location: Malmö, Sweden
-
 
 /* SITE */
 	Doctype: HTML5
@@ -15,25 +13,20 @@
   Standards: HTML, CSS, JavaScript
   Components: 11ty (SSG), Eleventastic (Eleventy Starter Kit), Git/Github, Netlify, SASS
   Software: iTerm, Visual Studio Code, Nova, Coda, Sketch, CodeKit, Gradient
-  
-	
-/* THANKS */
 
-	Max Böck for Eleventastic(https://github.com/maxboeck/eleventastic) 
+
+/* THANKS */
+	Max Böck for Eleventastic(https://github.com/maxboeck/eleventastic)
 	& mxb.dev (https://github.com/maxboeck/mxb)
-	Site: https://mxb.dev/
-	From: Vienna, Austria
-	
+	Website: https://mxb.dev/
+
 	Zach Letherman for 11ty (https://github.com/11ty/eleventy)
-	Site: https://zachleat.com/
-	From: Somewhere in the US I think
-	
-	
-	/* INSPIRATION */
-	
+	Website: https://zachleat.com/
+
+	/* RESOURCES */
+
 	Using UI System Fonts In Web Design: A Quick Practical Guide
 	https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
 
   Removed role=banner from main header
 	https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_Role
-	
