@@ -20,11 +20,10 @@
 	& mxb.dev (https://github.com/maxboeck/mxb)
 	Website: https://mxb.dev/
 
-	Zach Letherman for 11ty (https://github.com/11ty/eleventy)
+	Zach Leatherman for 11ty (https://github.com/11ty/eleventy)
 	Website: https://zachleat.com/
 
 	/* RESOURCES */
-
 	Using UI System Fonts In Web Design: A Quick Practical Guide
 	https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
 
